@@ -62,7 +62,7 @@ public class LexicalAnalyzer {
                 int j = i + 1;
                 while (j < n) {
                     final char cj = sourceCode.charAt(j);
-                    if (Character.isLetterOrDigit(cj) || cj == '_') {
+                    if (Character.isLetterOrDigit(cj)) {
                         j++;
                     } else {
                         break;
