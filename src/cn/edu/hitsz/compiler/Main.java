@@ -18,7 +18,7 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        final var lab = 2;
+        final var lab = 3;
         // 构建符号表以供各部分使用
         TokenKind.loadTokenKinds();
         final var symbolTable = new SymbolTable();
