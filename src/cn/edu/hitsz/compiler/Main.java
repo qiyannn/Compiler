@@ -18,14 +18,15 @@ import java.util.Objects;
 
 public class Main {
     public static void main(String[] args) {
-        final var lab = 3;
+        final var lab = 4;
+        final var srcPath = args.length >= 1 ? args[0] : FilePathConfig.SRC_CODE_PATH;
         // 构建符号表以供各部分使用
         TokenKind.loadTokenKinds();
         final var symbolTable = new SymbolTable();
 
         // 词法分析
         final var lexer = new LexicalAnalyzer(symbolTable);
-        lexer.loadFile(FilePathConfig.SRC_CODE_PATH);
+        lexer.loadFile(srcPath);
         lexer.run();
         lexer.dumpTokens(FilePathConfig.TOKEN_PATH);
         final var tokens = lexer.getTokens();
